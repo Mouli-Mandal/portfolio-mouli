@@ -1,0 +1,102 @@
+/* navbar.css */
+
+.navbar {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  /* Dark gradient background */
+  background: radial-gradient(circle at top, #0a2540, #020617);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo / Brand */
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  /* 🔥 FORCE WHITE TEXT */
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Nav links container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Individual links */
+.navbar-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #38bdf8;
+}
+
+/* Underline hover effect */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.navbar-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: radial-gradient(circle at top, #0b263d, #0c1956);
+    padding: 20px 0;
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

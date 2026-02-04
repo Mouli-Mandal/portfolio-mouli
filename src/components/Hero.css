@@ -1,0 +1,9 @@
+.hero-wrapper {
+  min-height: 70vh;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    min-height: 85vh; 
+  }
+}

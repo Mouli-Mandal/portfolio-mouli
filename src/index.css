@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Common section styling */
+section {
+  padding: 60px 8%;
+  background: radial-gradient(circle at top, #0a2540, #020617);
+}
+
+/* Navbar (unchanged) */
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+  background: linear-gradient(135deg, #08010e, #08010e);
+}
+
+.navbar a {
+  color: #ffffff;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+/* Hero section can stay different if you want */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0a2540, #020617);
+  color: #000;
+}

@@ -1,0 +1,166 @@
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+.about-line {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 14px;
+}
+
+/* Single letters – keep original outline style */
+.letter {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #38bdf8;
+  letter-spacing: 6px;
+}
+
+/* ME second line */
+.about-me {
+  font-size: 8rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #38bdf8;
+  letter-spacing: 6px;
+  line-height: 1;
+}
+
+/* The Circle (Photo replacing O) */
+.about-photo {
+  width: 60px;
+  height: 60px;
+  background-image: url("/myphoto.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.55);
+  flex-shrink: 0;
+}
+
+
+/* ──────────────────────────────────────────────── */
+/* PAGE LAYOUT */
+/* ──────────────────────────────────────────────── */
+
+.about-3d {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  background: linear-gradient(135deg, #020617, #0a2540);
+  color: white;
+  padding: 0 8%;
+  
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+/* ──────────────────────────────────────────────── */
+/* Rolling Text */
+/* ──────────────────────────────────────────────── */
+
+.about-rolling {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #e5e7eb;
+}
+
+.rolling-text {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.cursor {
+  margin-left: 4px;
+  color: #38bdf8;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* ──────────────────────────────────────────────── */
+/* RIGHT PANEL */
+/* ──────────────────────────────────────────────── */
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  perspective: 1200px;
+}
+
+.about-card {
+  background: linear-gradient(145deg, #0f2a44, #091a2e);
+  padding: 35px;
+  border-radius: 22px;
+  transform: translateZ(30px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.about-card:hover {
+  transform: translateZ(70px) translateX(10px);
+  box-shadow: 0 35px 80px rgba(56, 189, 248, 0.45);
+}
+
+.about-card h2 {
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+.about-card p {
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.about-card.highlight {
+  border-left: 4px solid #38bdf8;
+}
+
+
+/* ──────────────────────────────────────────────── */
+/* RESPONSIVE */
+/* ──────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .about-3d {
+    grid-template-columns: 1fr;
+    padding: 100px 6%;
+    gap: 60px;
+  }
+
+  .letter,
+  .about-me {
+    font-size: 3rem;
+  }
+
+  .about-photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-left {
+    align-items: center;
+    text-align: center;
+  }
+}
